@@ -11,6 +11,15 @@ public class CarPark {
     public CarPark(ArrayList<Space> spaces) {
         this.spaces = spaces;
     }
+
+    public void unParkVehicle(Vehicle vehicle){
+        for (Space space:spaces) {
+           if( space.getVehicleId()== vehicle.getId()){
+               space.setOccupied(false);
+               space.setVehicleId(0);
+           }
+        }
+    }
     public void parkVehicle(Vehicle vehicle){
         if (vehicle.getType() == MOTORCYCLE) {
             for (Space space : spaces) {

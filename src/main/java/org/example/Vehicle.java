@@ -1,7 +1,7 @@
 package org.example;
 
 public class Vehicle {
-    private int Id =0;
+    private int Id =1;
     private VehicleType type;
 
     public Vehicle( ) {
